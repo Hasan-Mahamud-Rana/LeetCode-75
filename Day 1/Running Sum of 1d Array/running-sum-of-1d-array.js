@@ -32,3 +32,19 @@ var runningSum = function (nums) {
   });
 
 };
+
+// Method 3
+var runningSum = function (nums) {
+
+  nums.map((num, i) => {
+    if (i > 0) {
+      nums[i] = nums[i - 1] + nums[i];
+    }
+  });
+
+  return nums;
+
+};
+
+// nums = [1, 2, 3, 4];
+// runningSum(nums);
