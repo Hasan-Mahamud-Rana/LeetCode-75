@@ -45,7 +45,7 @@ var pivotIndex = function (nums) {
     const r = i + 1 > nums.length ? nums.length : i + 1;
     let leftSideSum = nums.slice(0, i).reduce((acc, cur) => acc + cur, 0);
     let rightSideSum = nums.slice(r).reduce((acc, cur) => acc + cur, 0);
- 
+
     if (pIFound === false && leftSideSum === rightSideSum) {
       pI = i;
       pIFound = true;
@@ -55,9 +55,7 @@ var pivotIndex = function (nums) {
 
   return typeof pI !== 'undefined' ? pI : -1;
 };
-nums = [-1, -1, 0, 0, -1, -1];
 
-pivotIndex(nums);
 
 // Method 2
 var pivotIndex = function (nums) {
